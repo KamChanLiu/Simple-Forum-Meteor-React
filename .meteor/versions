@@ -7,7 +7,6 @@ blaze@2.1.3
 blaze-tools@1.0.4
 boilerplate-generator@1.0.4
 caching-compiler@1.0.0
-caching-html-compiler@1.0.2
 callback-hook@1.0.4
 check@1.1.0
 coffeescript@1.0.11
@@ -39,7 +38,6 @@ livedata@1.0.15
 logging@1.0.8
 meteor@1.1.10
 meteor-base@1.0.1
-meteorhacks:flow-layout@1.4.2
 minifiers@1.1.7
 minimongo@1.0.10
 mobile-experience@1.0.1
@@ -66,8 +64,6 @@ session@1.1.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 standard-minifiers@1.0.2
-templating@1.1.5
-templating-tools@1.0.0
 tracker@1.0.9
 ui@1.0.8
 underscore@1.0.4
