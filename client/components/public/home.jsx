@@ -8,8 +8,16 @@ Home = React.createClass({
   },
   renderMessages() {
     return this.data.messages.map((message) => {
-      return <Message key={message._id} message={message.title} />;
+      return <Message key={message._id.valueOf()} message={message} />;
     });
+  },
+  addMessage(){
+    var newMessage = {
+      title: "new message",
+      message: "test"
+    };
+
+    Meteor.call("addMessage", newMessage);
   },
   render() {
     return (
@@ -17,6 +25,7 @@ Home = React.createClass({
         <ul>
           {this.renderMessages()}
         </ul>
+        <MessageAdd />
       </div>
     )
   }

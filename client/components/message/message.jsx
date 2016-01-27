@@ -1,12 +1,11 @@
 Message = React.createClass({
-  propTypes: {
-    key: React.PropTypes.object.isRequired,
-    message: React.PropTypes.string.isRequired
+  propTypes: {    
+    message: React.PropTypes.object.isRequired
   },
   render() {
     return (
-      <li key={this.props.key}>
-        {this.props.message}
+      <li>
+        <b>{this.props.message.title}</b> - {this.props.message.message}
       </li>
     );
   }

@@ -9,6 +9,8 @@ This is a simple boilerplate to be used as a starting point for developing Meteo
 * Meteor Core
 * Routing
   * [kadira:flow-router](https://github.com/kadirahq/flow-router)
+* Collections
+  * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
 * Views and Layouts
   * [react](https://github.com/reactjs/react-meteor)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)  
