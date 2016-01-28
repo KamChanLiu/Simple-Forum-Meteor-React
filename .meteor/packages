@@ -21,3 +21,5 @@ kadira:flow-router
 kadira:react-layout
 react
 aldeed:collection2
+sanjo:jasmine
+velocity:html-reporter
