@@ -14,6 +14,9 @@ This is a simple boilerplate to be used as a starting point for developing Meteo
 * Views and Layouts
   * [react](https://github.com/reactjs/react-meteor)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)  
+* Testing
+  * [sanjo:jasmine](https://github.com/xolvio/meteor-jasmine)
+  * [velocity:html-reporter](https://github.com/meteor-velocity/html-reporter)
 
  "insecure" and "autopublish" packages are removed by default
 
