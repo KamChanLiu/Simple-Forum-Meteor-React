@@ -15,3 +15,21 @@ FlowRouter.route("/category/manage", {
     });
   }
 });
+
+FlowRouter.route("/user/register", {
+  name: 'userregister',
+  action(params) {
+    ReactLayout.render(MainLayout, {
+      content: <UserRegister />
+    });
+  }
+});
+
+FlowRouter.route("/user/login", {
+  name: 'userlogin',
+  action(params) {
+    ReactLayout.render(MainLayout, {
+      content: <UserLogin />
+    });
+  }
+});

@@ -8,7 +8,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.use([
-    'simpleforum:lib'
+    'simpleforum:lib',
+    'simpleforum:users'
   ])
 
   api.addFiles([

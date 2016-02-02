@@ -91,6 +91,7 @@ sha@1.0.4
 simpleforum:core@0.0.1
 simpleforum:forum@0.0.1
 simpleforum:lib@0.0.1
+simpleforum:users@0.0.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4

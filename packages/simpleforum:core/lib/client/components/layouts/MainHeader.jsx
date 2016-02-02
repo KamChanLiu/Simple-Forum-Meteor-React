@@ -7,6 +7,7 @@ MainHeader = React.createClass({
             <li><a href="/">Home</a></li>
           </ul>
         </nav>
+        <UserMenu />
         <hr />
       </div>
     );
