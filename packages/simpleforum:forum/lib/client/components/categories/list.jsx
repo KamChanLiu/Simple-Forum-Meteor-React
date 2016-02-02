@@ -1,27 +1,25 @@
 CategoriesList = React.createClass({
-  addCategory(e){
-    e.preventDefault();
-    let nameNode = this.refs.inputName;
-    let activeNode = this.refs.inputActive;
+  mixins: [ReactMeteorData],
+  getMeteorData() {
+    Meteor.subscribe("categories");
 
-    let category  = {
-      name: nameNode.value.trim(),
-      active: activeNode.checked
+    return {
+      categories: Categories.find({ active:true }).fetch()
     };
-
-    Meteor.call("addCategory", category);
-
-    nameNode.value = "";
-    activeNode.value = "";
+  },
+  renderCategories() {
+    return this.data.categories.map((category) => {
+      return (
+        <li key={category._id}>
+          <a>{category.name}</a>
+        </li>);
+    });
   },
   render() {
-    
-
     return (
-      <div>
-        <ul>
-        </ul>
-      </div>
+      <ul>
+        {this.renderCategories()}
+      </ul>
     );
   }
 });
