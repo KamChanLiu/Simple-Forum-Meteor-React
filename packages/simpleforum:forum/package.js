@@ -42,7 +42,8 @@ Package.onUse(function(api) {
     'CategoriesList',
     'Threads',
     'ThreadsAdd',
-    'ThreadsList'
+    'ThreadsList',
+    'ThreadsCreateButton'
   ]);
 });
 

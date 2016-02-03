@@ -1,35 +1,21 @@
 ThreadsList = React.createClass({
-  getInitialState: function() {
-    return {
-      threadCategory: ''
-    };
-  },
-  mixins: [ReactMeteorData],
-  getMeteorData() {
-    Meteor.subscribe('threads');
-
-    return {
-      threads: Threads.find({}, {sort: {createdAt: -1}}).fetch()
-    }
+  propTypes: {
+    threads: React.PropTypes.array.isRequired,
+    selectedCategory: React.PropTypes.string
   },
   renderThreads() {
-    return this.data.threads.map((thread) => {
+    return this.props.threads.map((thread) => {
       return (<ThreadListItem item={thread} />);
     });
   },
   render() {
     return (
-      <div className="row">
         <div>
-          <ThreadsCreateButton />
-        </div>
-        <div className="row spacer"></div>
-        <div>
+          <h3>{this.props.selectedCategory}</h3>
           <div className="thread-list">
             {this.renderThreads()}
           </div>
         </div>
-      </div>
     );
   }
 });

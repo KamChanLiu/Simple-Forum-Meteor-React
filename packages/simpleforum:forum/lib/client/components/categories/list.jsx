@@ -1,25 +1,29 @@
 CategoriesList = React.createClass({
-  mixins: [ReactMeteorData],
-  getMeteorData() {
-    Meteor.subscribe("categories");
-
-    return {
-      categories: Categories.find({ active:true }).fetch()
-    };
+  propTypes: {
+    categories: React.PropTypes.array.isRequired,
+    categoryOnClick: React.PropTypes.func.isRequired,
+    selectedCategory: React.PropTypes.string
   },
   renderCategories() {
-    return this.data.categories.map((category) => {
-      return (
-        <li key={category._id}>
-          <a>{category.name}</a>
-        </li>);
+    return this.props.categories.map((category) => {
+      var categoryClass = this.props.selectedCategory == category.name ? 'active' : '';
+      categoryClass += ' btn btn-default';
+
+      return (<button
+          value={category.name}
+          key={category.name}
+          onClick={this.props.categoryOnClick}
+          type="button"
+          className={categoryClass}>
+          {category.name}
+        </button>);
     });
   },
   render() {
     return (
-      <ul>
+      <div className="btn-group" role="group" aria-label="...">
         {this.renderCategories()}
-      </ul>
+      </div>
     );
   }
 });

@@ -5,9 +5,7 @@ ThreadListItem = React.createClass({
   render() {
     var id = this.props.item._id.valueOf();
     var threadLink = `/thread/${id}`;
-
-    console.log(this.props.item.createdAt);
-
+    
     return(
       <div key={id} className="thread-list-item panel panel-default">
         <div className="panel-heading">

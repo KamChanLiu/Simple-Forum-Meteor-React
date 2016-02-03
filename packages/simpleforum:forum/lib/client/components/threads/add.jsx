@@ -49,7 +49,7 @@ ThreadsAdd = React.createClass({
       author: this.data.currentUser.username,
       authorId: this.data.currentUser._id
     };
-    
+
     Meteor.call('addThread', thread, function(error, result){
       var threadId = result;
       FlowRouter.go('/thread/' + threadId);
@@ -63,14 +63,14 @@ ThreadsAdd = React.createClass({
       var categoryClass = this.state.threadCategory == category.name ? 'active' : '';
       categoryClass += ' btn btn-default';
 
-      return <button
-        value={category.name}
-        key={category.name}
-        onClick={this.setCategory}
-        type="button"
-        className={categoryClass}>
-        {category.name}
-      </button>
+      return (<button
+          value={category.name}
+          key={category.name}
+          onClick={this.setCategory}
+          type="button"
+          className={categoryClass}>
+          {category.name}
+        </button>);
     });
   },
   render() {
