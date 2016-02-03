@@ -28,7 +28,8 @@ Package.onUse(function(api) {
     'react',
     'aldeed:collection2',
     'sanjo:jasmine',
-    'velocity:html-reporter'
+    'velocity:html-reporter',
+    'momentjs:moment'
   ];
 
   api.use(packages);
@@ -36,7 +37,7 @@ Package.onUse(function(api) {
   api.imply(packages);
 
   api.addFiles([
-    'lib/core.js',    
+    'lib/core.js',
     'lib/utils.js'
   ], ['client', 'server']);
 });

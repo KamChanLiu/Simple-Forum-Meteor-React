@@ -19,10 +19,12 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'lib/client/components/categories/add.jsx',
-    'lib/client/components/categories/item.jsx',
+    'lib/client/components/categories/list-item.jsx',
     'lib/client/components/categories/list.jsx',
     'lib/client/components/categories/manage.jsx',
-    'lib/client/components/threads/add.jsx'
+    'lib/client/components/threads/add.jsx',
+    'lib/client/components/threads/list.jsx',
+    'lib/client/components/threads/list-item.jsx'
   ], 'client');
 
   api.addFiles([
@@ -38,7 +40,8 @@ Package.onUse(function(api) {
     'CategoriesManage',
     'CategoriesList',
     'Threads',
-    'ThreadsAdd'
+    'ThreadsAdd',
+    'ThreadsList'
   ]);
 });
 

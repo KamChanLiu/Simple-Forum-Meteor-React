@@ -1,4 +1,4 @@
-CategoryItem = React.createClass({
+CategoryListItem = React.createClass({
   propTypes: {
       item: React.PropTypes.object.isRequired
   },

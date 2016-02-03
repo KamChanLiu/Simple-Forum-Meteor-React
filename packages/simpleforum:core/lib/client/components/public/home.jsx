@@ -1,8 +1,9 @@
 Home = React.createClass({
   render() {
     return (
-      <div>        
+      <div>
         <CategoriesList />
+        <ThreadsList />
       </div>
     )
   }

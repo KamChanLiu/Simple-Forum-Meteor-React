@@ -9,7 +9,7 @@ CategoriesManage = React.createClass({
   },
   renderCategories() {
     return this.data.categories.map((category) => {
-      return (<CategoryItem item={category} />);
+      return (<CategoryListItem item={category} />);
     });
   },
   render() {
