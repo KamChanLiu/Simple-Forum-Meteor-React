@@ -14,28 +14,36 @@ UserMenu = React.createClass({
 
     if (currentUser) {
       userAction = (
-        <a>Hello {currentUser.username}</a>
+        <li>
+          <a>Hello {currentUser.username}</a>
+        </li>
       );
 
       var logoutAction = (
-        <a href="#" onClick={this.logoutUser}>Logout</a>
+        <li>
+          <a href="#" onClick={this.logoutUser}>Logout</a>
+        </li>
       );
     } else {
       userAction = (
-        <a href="user/login">Login</a>
+        <li>
+          <a href="/user/login">Login</a>
+        </li>
       );
 
       var registerAction = (
-        <a href="/user/register">Register</a>
+        <li>
+          <a href="/user/register">Register</a>
+        </li>
       );
     }
 
     return (
-      <div>
-        {userAction}&nbsp;|&nbsp;
+      <ul className="nav navbar-nav navbar-right">
+        {userAction}
         {logoutAction}
         {registerAction}
-      </div>
+      </ul>
     );
   }
 });

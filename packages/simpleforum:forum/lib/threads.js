@@ -7,7 +7,16 @@ Threads.schema = new SimpleSchema({
   },
   createdAt: {
     type: Date,
-    optional: true
+    optional: true,
+    autoValue: function() {
+      if (this.isInsert) {
+        return new Date();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: new Date()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    }
   },
   title: {
     type: String,
@@ -45,7 +54,12 @@ Threads.schema = new SimpleSchema({
   },
   active: {
     type: Boolean,
-    optional: false
+    optional: false,
+    autoValue: function() {
+      if (this.isInsert) {
+        return true;
+      }
+    }
   }
 });
 

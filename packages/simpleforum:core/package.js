@@ -20,6 +20,7 @@ Package.onUse(function(api) {
     'lib/client/components/layouts/MainHeader.jsx',
     'lib/client/components/layouts/MainLayout.jsx',
     'lib/client/components/public/home.jsx',
+    'lib/client/stylesheets/main.scss',
     'lib/routes.jsx'
   ], 'client');
 });

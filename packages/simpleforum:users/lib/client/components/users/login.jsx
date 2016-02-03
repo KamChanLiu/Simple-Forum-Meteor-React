@@ -42,17 +42,22 @@ UserLogin = React.createClass({
     },
     render() {
         return (
-            <div>
-              <h1>Login</h1>
-              <form onSubmit={this.loginUser}>
-                  <AuthErrors errors={this.state.errors} />
-                  <label>Username</label><br/>
-                  <input name="Username" type="text" ref="usernameInput" /><br />
-                  <label>Password</label><br/>
-                  <input name="Password" type="password" ref="passwordInput" /><br />
-                  <br /><br />
-                  <input type="submit" />
-              </form>
+            <div className="row">
+              <div className="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h1>Login</h1>
+                <form onSubmit={this.loginUser}>
+                    <AuthErrors errors={this.state.errors} />
+                    <div className="form-group">
+                      <label>Username</label>
+                      <input className="form-control" name="Username" type="text" ref="usernameInput" />
+                    </div>
+                    <div className="form-group">
+                      <label>Password</label>
+                      <input className="form-control" name="Password" type="password" ref="passwordInput" />
+                    </div>
+                    <input className="btn btn-primary" type="submit" />
+                </form>
+              </div>
             </div>
         )
     }
