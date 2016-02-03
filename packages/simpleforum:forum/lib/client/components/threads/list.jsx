@@ -9,7 +9,7 @@ ThreadsList = React.createClass({
     Meteor.subscribe('threads');
 
     return {
-      threads: Threads.find().fetch()
+      threads: Threads.find({}, {sort: {createdAt: -1}}).fetch()
     }
   },
   renderThreads() {
@@ -19,8 +19,16 @@ ThreadsList = React.createClass({
   },
   render() {
     return (
-      <div className="row thread-list">        
-        {this.renderThreads()}
+      <div className="row">
+        <div>
+          <ThreadsCreateButton />
+        </div>
+        <div className="row spacer"></div>
+        <div>
+          <div className="thread-list">
+            {this.renderThreads()}
+          </div>
+        </div>
       </div>
     );
   }

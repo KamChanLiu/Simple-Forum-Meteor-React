@@ -24,7 +24,8 @@ Package.onUse(function(api) {
     'lib/client/components/categories/manage.jsx',
     'lib/client/components/threads/add.jsx',
     'lib/client/components/threads/list.jsx',
-    'lib/client/components/threads/list-item.jsx'
+    'lib/client/components/threads/list-item.jsx',
+    'lib/client/components/threads/create-button.jsx'
   ], 'client');
 
   api.addFiles([
