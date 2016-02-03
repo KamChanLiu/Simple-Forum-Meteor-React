@@ -29,7 +29,7 @@ Threads.schema = new SimpleSchema({
     max: 5000
   },
   category: {
-    type: [String],
+    type: String,
     optional: false
   },
   author: {
@@ -54,7 +54,7 @@ Threads.schema = new SimpleSchema({
   },
   active: {
     type: Boolean,
-    optional: false,
+    optional: true,
     autoValue: function() {
       if (this.isInsert) {
         return true;

@@ -7,15 +7,9 @@ FlowRouter.route("/", {
   }
 });
 
-FlowRouter.route("/category/manage", {
-  name: 'categorymanage',
-  action(params) {
-    ReactLayout.render(MainLayout, {
-      content: <CategoriesManage />
-    });
-  }
-});
-
+/*
+  Users
+*/
 FlowRouter.route("/user/register", {
   name: 'userregister',
   action(params) {
@@ -30,6 +24,27 @@ FlowRouter.route("/user/login", {
   action(params) {
     ReactLayout.render(MainLayout, {
       content: <UserLogin />
+    });
+  }
+});
+
+/*
+  Forums
+*/
+FlowRouter.route("/thread/add", {
+  name: 'threadadd',
+  action(params) {
+    ReactLayout.render(MainLayout, {
+      content: <ThreadsAdd />
+    });
+  }
+});
+
+FlowRouter.route("/category/manage", {
+  name: 'categorymanage',
+  action(params) {
+    ReactLayout.render(MainLayout, {
+      content: <CategoriesManage />
     });
   }
 });

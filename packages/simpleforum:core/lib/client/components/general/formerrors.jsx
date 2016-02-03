@@ -1,4 +1,4 @@
-AuthErrors = React.createClass({
+FormErrors = React.createClass({
     propTypes: {
         errors: React.PropTypes.array
     },
@@ -18,7 +18,7 @@ AuthErrors = React.createClass({
               </div>
             )
         } else {
-          return null;          
+          return null;
         }
     }
 });

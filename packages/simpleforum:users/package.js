@@ -14,7 +14,6 @@ Package.onUse(function(api) {
   ], ['client', 'server']);
 
   api.addFiles([
-    'lib/client/components/users/autherrors.jsx',
     'lib/client/components/users/register.jsx',
     'lib/client/components/users/login.jsx',
     'lib/client/components/users/menu.jsx'

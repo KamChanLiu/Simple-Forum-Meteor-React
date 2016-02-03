@@ -21,12 +21,15 @@ Package.onUse(function(api) {
     'lib/client/components/categories/add.jsx',
     'lib/client/components/categories/item.jsx',
     'lib/client/components/categories/list.jsx',
-    'lib/client/components/categories/manage.jsx'
+    'lib/client/components/categories/manage.jsx',
+    'lib/client/components/threads/add.jsx'
   ], 'client');
 
   api.addFiles([
     'lib/server/methods/categories.js',
     'lib/server/publications/categories.js',
+    'lib/server/methods/threads.js',
+    'lib/server/publications/threads.js',
     'lib/server/bootstrap.js'
   ], 'server');
 
@@ -35,6 +38,7 @@ Package.onUse(function(api) {
     'CategoriesManage',
     'CategoriesList',
     'Threads',
+    'ThreadsAdd'
   ]);
 });
 

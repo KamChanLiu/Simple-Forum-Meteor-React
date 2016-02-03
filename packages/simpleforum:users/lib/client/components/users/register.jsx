@@ -59,7 +59,7 @@ UserRegister = React.createClass({
               <div className="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                 <h1>Register</h1>
                 <form onSubmit={this.registerUser}>
-                    <AuthErrors errors={this.state.errors} />
+                    <FormErrors errors={this.state.errors} />
                     <div className="form-group">
                       <label>Username</label>
                       <input className="form-control" name="Username" type="text" ref="usernameInput" />

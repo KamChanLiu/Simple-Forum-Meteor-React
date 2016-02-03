@@ -2,7 +2,7 @@ Meteor.methods({
   addThread: function(thread) {
     check(thread, Threads.simpleSchema());
     // TODO: Check logged in
-    Threads.insert(thread);
+    return Threads.insert(thread);
   },
   deleteThread: function(threadId) {
     var thread = Threads.findOne(threadId);
