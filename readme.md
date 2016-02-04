@@ -2,6 +2,9 @@
 
 This is a simple real time forum built with the [Simple Meteor React Boilerplate](https://github.com/KamChanLiu/Simple-Meteor-React-Boilerplate).
 
+# Demo
+View the demo [here](http://simpleforum.meteor.com/).
+
 # Getting Started
 
 Simply install Meteor, clone the repository and run 'meteor' within the project directory.

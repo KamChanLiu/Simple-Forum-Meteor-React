@@ -14,7 +14,8 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'lib/categories.js',
-    'lib/threads.js'
+    'lib/threads.js',
+    'lib/posts.js'
   ], ['client', 'server']);
 
   api.addFiles([
@@ -22,17 +23,23 @@ Package.onUse(function(api) {
     'lib/client/components/categories/list-item.jsx',
     'lib/client/components/categories/list.jsx',
     'lib/client/components/categories/manage.jsx',
+    'lib/client/components/threads/detail.jsx',
+    'lib/client/components/threads/item.jsx',
     'lib/client/components/threads/add.jsx',
     'lib/client/components/threads/list.jsx',
     'lib/client/components/threads/list-item.jsx',
-    'lib/client/components/threads/create-button.jsx'
+    'lib/client/components/threads/create-button.jsx',
+    'lib/client/components/posts/add.jsx',
+    'lib/client/components/posts/item.jsx'
   ], 'client');
 
   api.addFiles([
     'lib/server/methods/categories.js',
-    'lib/server/publications/categories.js',
     'lib/server/methods/threads.js',
+    'lib/server/methods/posts.js',
+    'lib/server/publications/categories.js',
     'lib/server/publications/threads.js',
+    'lib/server/publications/posts.js',
     'lib/server/bootstrap.js'
   ], 'server');
 
@@ -41,9 +48,14 @@ Package.onUse(function(api) {
     'CategoriesManage',
     'CategoriesList',
     'Threads',
+    'ThreadsDetail',
+    'ThreadsItem',
     'ThreadsAdd',
     'ThreadsList',
-    'ThreadsCreateButton'
+    'ThreadsCreateButton',
+    'Posts',
+    'PostsAdd',
+    'PostsItem'
   ]);
 });
 

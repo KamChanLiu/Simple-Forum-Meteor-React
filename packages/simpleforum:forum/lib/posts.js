@@ -1,6 +1,6 @@
-Threads = new Mongo.Collection('threads');
+Posts = new Mongo.Collection('posts');
 
-Threads.schema = new SimpleSchema({
+Posts.schema = new SimpleSchema({
   _id: {
     type: String,
     optional: true
@@ -18,19 +18,10 @@ Threads.schema = new SimpleSchema({
       }
     }
   },
-  title: {
-    type: String,
-    optional: false,
-    max: 500
-  },
   body: {
     type: String,
     optional: false,
     max: 5000
-  },
-  category: {
-    type: String,
-    optional: false
   },
   author: {
     type: String,
@@ -40,22 +31,9 @@ Threads.schema = new SimpleSchema({
     type: String,
     optional: false
   },
-  replyCount: {
-    type: Number,
-    optional: true,
-    autoValue: function() {
-      if (this.isInsert) {
-        return 0;
-      }
-    }
-  },
-  lastReplyUser: {
+  threadId: {
     type: String,
-    optional: true
-  },
-  lastReplyAt: {
-    type: Date,
-    optional: true
+    optional: false
   },
   active: {
     type: Boolean,
@@ -68,4 +46,4 @@ Threads.schema = new SimpleSchema({
   }
 });
 
-Threads.attachSchema(Threads.schema);
+Posts.attachSchema(Posts.schema);
