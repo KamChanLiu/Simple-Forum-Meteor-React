@@ -31,10 +31,12 @@ FlowRouter.route("/user/login", {
 /*
   Forums
 */
-FlowRouter.route("/shop/:shopId", {
-  name: 'shop',
-  action: function(params) {
-    renderMainLayoutWith(<ShopListing {...params} />);
+FlowRouter.route("/thread/add", {
+  name: 'threadadd',
+  action(params) {
+    ReactLayout.render(MainLayout, {
+      content: <ThreadsAdd />
+    });
   }
 });
 
@@ -43,15 +45,6 @@ FlowRouter.route("/thread/:threadId", {
   action: function(params) {
     ReactLayout.render(MainLayout, {
       content: <ThreadsDetail {...params} />
-    });
-  }
-});
-
-FlowRouter.route("/thread/add", {
-  name: 'threadadd',
-  action(params) {
-    ReactLayout.render(MainLayout, {
-      content: <ThreadsAdd />
     });
   }
 });

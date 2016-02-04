@@ -1,6 +1,6 @@
 PostsAdd = React.createClass({
   propTypes: {
-    currentUser: React.PropTypes.object.isRequired,
+    currentUser: React.PropTypes.object,
     threadId: React.PropTypes.string.isRequired
   },
   getInitialState: function() {
@@ -35,7 +35,7 @@ PostsAdd = React.createClass({
       authorId: this.props.currentUser._id,
       threadId: threadId
     };
-    
+
     bodyNode.value = '';
     Meteor.call('addPost', post, function(error, result){
       if (result) {
