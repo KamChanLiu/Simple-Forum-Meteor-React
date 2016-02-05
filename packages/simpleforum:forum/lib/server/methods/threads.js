@@ -1,7 +1,11 @@
 Meteor.methods({
   addThread: function(thread) {
     check(thread, Threads.simpleSchema());
-    // TODO: Check logged in
+
+    if (!Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+
     return Threads.insert(thread);
   },
   deleteThread: function(threadId) {

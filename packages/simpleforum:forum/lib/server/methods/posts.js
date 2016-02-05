@@ -1,13 +1,20 @@
 Meteor.methods({
   addPost: function(post) {
     check(post, Posts.simpleSchema());
-    // TODO: Check logged in
+
+    if (!Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }
+    
     return Posts.insert(post);
   },
   deletePost: function(postId) {
     var post = Posts.findOne(postId);
-    // TODO: Check authorisation
-    // Don't actually delete it
-    Posts.update(postId, { $set: { active: false } });
+
+    if (post.authorId !== Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    } else {
+      Posts.update(postId, { $set: { active: false } });
+    }
   }
 });

@@ -13,7 +13,7 @@ ThreadsDetail = React.createClass({
   renderPosts() {
     if (this.data.posts) {
       return this.data.posts.map((post) => {
-        return <PostsItem item={post} />
+        return <PostsItem key={post._id} item={post} userId={this.data.currentUser ? this.data.currentUser._id : null} />
       });
     }
   },
