@@ -31,7 +31,7 @@ FlowRouter.route("/user/login", {
 /*
   Forums
 */
-FlowRouter.route("/thread/add", {
+FlowRouter.route("/threads/add", {
   name: 'threadadd',
   action(params) {
     ReactLayout.render(MainLayout, {

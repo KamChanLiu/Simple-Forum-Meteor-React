@@ -6,7 +6,7 @@ ThreadsCreateButton = React.createClass({
     }
   },
   createThread() {
-    FlowRouter.go('/thread/add');
+    FlowRouter.go('/threads/add');
   },
   render() {
     if (!this.data.currentUser) {
