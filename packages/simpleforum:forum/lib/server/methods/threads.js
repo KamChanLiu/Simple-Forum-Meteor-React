@@ -18,5 +18,9 @@ Meteor.methods({
     var thread = Threads.findOne(threadId);
     var count = thread.replyCount + 1;
     Threads.update(threadId, { $set: {replyCount: count} });
+  },
+  searchThreads: function(searchTerm) {
+    check(searchTerm, String);
+    return Threads.index.search(searchTerm);
   }
 });

@@ -57,3 +57,12 @@ FlowRouter.route("/category/manage", {
     });
   }
 });
+
+FlowRouter.route("/search", {
+  name: 'threadsearch',
+  action(params) {
+    ReactLayout.render(MainLayout, {
+      content: <ThreadsSearch />
+  });
+  }
+});

@@ -18,18 +18,20 @@ Package.onUse(function(api) {
     'standard-minifiers',
     'es5-shim',
     'ecmascript',
-    'accounts-base',
-    'accounts-password',
+    'underscore',
     'check',
     'fourseven:scss',
     'reywood:bootstrap3-sass',
     'kadira:flow-router',
     'kadira:react-layout',
     'react',
+    'momentjs:moment',
+    'lbee:lunr',
     'aldeed:collection2',
+    'accounts-base',
+    'accounts-password',
     'sanjo:jasmine',
-    'velocity:html-reporter',
-    'momentjs:moment'
+    'velocity:html-reporter'
   ];
 
   api.use(packages);

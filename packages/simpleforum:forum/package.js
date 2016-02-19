@@ -29,6 +29,7 @@ Package.onUse(function(api) {
     'lib/client/components/threads/list.jsx',
     'lib/client/components/threads/list-item.jsx',
     'lib/client/components/threads/create-button.jsx',
+    'lib/client/components/threads/search.jsx',
     'lib/client/components/posts/add.jsx',
     'lib/client/components/posts/item.jsx'
   ], 'client');
@@ -40,7 +41,8 @@ Package.onUse(function(api) {
     'lib/server/publications/categories.js',
     'lib/server/publications/threads.js',
     'lib/server/publications/posts.js',
-    'lib/server/bootstrap.js'
+    'lib/server/bootstrap.js',
+    'lib/server/indexes.js'
   ], 'server');
 
   api.export([
@@ -53,6 +55,7 @@ Package.onUse(function(api) {
     'ThreadsAdd',
     'ThreadsList',
     'ThreadsCreateButton',
+    'ThreadsSearch',
     'Posts',
     'PostsAdd',
     'PostsItem'

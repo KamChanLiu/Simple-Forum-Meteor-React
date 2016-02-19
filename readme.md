@@ -1,6 +1,10 @@
-# SimpleForum using Simple Meteor React Boilerplate
+# SimpleForum using Simple Meteor React Boilerplate with Lunr Search
 
 This is a simple real time forum built with the [Simple Meteor React Boilerplate](https://github.com/KamChanLiu/Simple-Meteor-React-Boilerplate).
+
+This branch contains the [lbee:Lunr](https://atmospherejs.com/lbee/lunr) package, a simple full-text search engine, to provide simple thread searching.
+
+Indexing is carried out on the server side.
 
 # Demo
 View the demo [here](http://simpleforum.meteor.com/).
